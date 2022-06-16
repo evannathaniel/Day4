@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="87" id="KGk-i7-Jjw" customClass="CustomTableViewCell" customModule="Day4" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="483" height="87"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="483" height="87"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ye-GA-l5s">
+                        <rect key="frame" x="11" y="11" width="400" height="24"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbh-Eh-o0a">
+                        <rect key="frame" x="11" y="46" width="400" height="20"/>
+                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sXC-Z7-MZX">
+                        <rect key="frame" x="422" y="11" width="50" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="Hr2-1f-SAj"/>
+                            <constraint firstAttribute="width" constant="50" id="sTI-sW-zd9"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="trash.fill" catalog="system">
+                            <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="didTabButton" destination="KGk-i7-Jjw" eventType="touchUpInside" id="4hH-BK-1fr"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="sXC-Z7-MZX" firstAttribute="leading" secondItem="5ye-GA-l5s" secondAttribute="trailing" constant="11" id="01t-uc-PvC"/>
+                    <constraint firstItem="5ye-GA-l5s" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="1lS-iB-zf2"/>
+                    <constraint firstItem="pbh-Eh-o0a" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="11" id="M2v-Xn-BQr"/>
+                    <constraint firstAttribute="bottom" secondItem="pbh-Eh-o0a" secondAttribute="bottom" constant="20" id="R5R-JT-xQI"/>
+                    <constraint firstAttribute="bottom" secondItem="sXC-Z7-MZX" secondAttribute="bottom" constant="11" id="UH4-Ra-4Am"/>
+                    <constraint firstAttribute="trailing" secondItem="sXC-Z7-MZX" secondAttribute="trailing" constant="11" id="UMy-5i-tcr"/>
+                    <constraint firstItem="5ye-GA-l5s" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="11" id="Y0q-NX-Uhn"/>
+                    <constraint firstItem="sXC-Z7-MZX" firstAttribute="leading" secondItem="pbh-Eh-o0a" secondAttribute="trailing" constant="11" id="d2R-e8-mHI"/>
+                    <constraint firstItem="sXC-Z7-MZX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="dcJ-qZ-JF5"/>
+                    <constraint firstItem="pbh-Eh-o0a" firstAttribute="top" secondItem="5ye-GA-l5s" secondAttribute="bottom" constant="11" id="u0t-9F-Nhl"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="button" destination="sXC-Z7-MZX" id="RAR-vF-Tap"/>
+                <outlet property="subtitleLabel" destination="pbh-Eh-o0a" id="KTY-Wm-bD1"/>
+                <outlet property="titleLabel" destination="5ye-GA-l5s" id="hMq-K8-IBB"/>
+            </connections>
+            <point key="canvasLocation" x="245.6521739130435" y="76.004464285714278"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="trash.fill" catalog="system" width="121" height="128"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
